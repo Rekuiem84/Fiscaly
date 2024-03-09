@@ -25,6 +25,7 @@ html {
 }
 body {
 	font-family: var(--font-stack);
+	overflow-x: hidden;
 }
 img,
 svg {
@@ -96,7 +97,7 @@ section p {
 	gap: 1em;
 	padding: 4rem 6rem;
 }
-.nav-main > :is(.nav__logo, .nav__login) {
+.nav-main :is(.nav__logo, .nav__login) {
 	flex: 0;
 	font-weight: 800;
 }
@@ -125,7 +126,7 @@ section p {
 	padding: 0.6em 1.75em;
 }
 @media (width < 992px) {
-	.nav-main,
+	// .nav-main,
 	.nav-main__list {
 		flex-direction: column;
 	}
@@ -232,13 +233,13 @@ section h2 {
 	}
 	&::before {
 		--color: rgba(38, 125, 217, 0.15);
-		bottom: 0;
+		top: 150px;
 		left: 0%;
 		translate: -50% 0;
 	}
 	&::after {
 		--color: rgba(227, 74, 23, 0.15);
-		bottom: 0;
+		top: 260px;
 		right: 0;
 		translate: 40% 40%;
 	}
@@ -247,7 +248,14 @@ section h2 {
 	display: flex;
 	flex-wrap: nowrap;
 	overflow: hidden;
-	align-items: center;
+
+	&:has([data-tab="accounting"].active)
+		~ .content:not([data-tab="accounting"]) {
+		display: none;
+	}
+	&:has([data-tab="taxation"].active) ~ .content:not([data-tab="taxation"]) {
+		display: none;
+	}
 }
 .services h3 {
 	position: relative;
@@ -256,7 +264,14 @@ section h2 {
 	font-size: var(--fs-l);
 	padding: 1.5em;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
+	&::before,
+	&::after {
+		pointer-events: none;
+	}
 	&.active::after {
 		content: "";
 		position: absolute;
@@ -347,16 +362,86 @@ section h2 {
 .certifications {
 	border-radius: 1.25rem;
 	outline: 1px solid var(--color-accent);
-	padding: 1rem;
+	padding: 3rem 1rem;
 	margin-block: 4rem;
 	margin-inline: clamp(1.25rem, -0.4rem + 6.6vw, 5.375rem);
 	text-align: center;
 }
 .certifications h2 {
-	padding-bottom: 1em;
+	padding-block: 0 1em;
 }
 .certifications img {
-	margin-block: 2rem;
+	margin-top: 2rem;
+}
+/* Contact */
+.contact {
+	text-align: center;
+}
+.contact h1 {
+	font-size: var(--fs-xxl);
+	text-transform: uppercase;
+
+	& + p {
+		font-size: var(--fs-xl);
+		margin-block: 0.8em;
+		max-width: 35ch;
+		margin-inline: auto;
+	}
+}
+.contact .contacts-cont {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	gap: 1rem;
+	margin-bottom: 2em;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 450px;
+		aspect-ratio: 1;
+		z-index: -1;
+		border-radius: 50%;
+		background-image: radial-gradient(
+			circle,
+			var(--color),
+			rgba(255, 255, 255, 0) 75%
+		);
+	}
+	&::before {
+		--color: rgba(38, 125, 217, 0.15);
+		top: 0;
+		right: 15%;
+	}
+	&::after {
+		--color: rgba(227, 74, 23, 0.15);
+		bottom: 0%;
+		left: -40px;
+	}
+
+	& > div {
+		border-radius: 12px;
+		border: 1px solid var(--color-accent);
+		background: var(--color-primary);
+		flex: 1 0 350px;
+		max-width: 450px;
+		margin-inline: auto;
+		padding: 2rem;
+		font-size: var(--fs-xl);
+
+		& i {
+			font-size: 2em;
+		}
+
+		& h2 {
+			font-size: 1em;
+		}
+		& p {
+			font-size: var(--fs-text);
+		}
+	}
 }
 /* Footer */
 footer {

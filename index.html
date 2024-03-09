@@ -9,10 +9,9 @@
   <meta name='description' content='High-quality bilingual accountancy and tax services. For entrepreneurs starting or acquiring a business, and
           private individuals in France with local or international investments, we provide tailored advice to manage
           your legal obligations tax-efficiently.'>
-  <link rel='stylesheet' href='font.css' />
-  <link rel='stylesheet' href='style.css' />
-  <!-- <link rel='shortcut icon' type='image/png' href='' /> -->
-  <script src='script.js' defer></script>
+  <link rel='stylesheet' href='assets/font.css' />
+  <link rel='stylesheet' href='assets/style.css' />
+  <script src='assets/script.js' defer></script>
   <!-- Icons -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -23,11 +22,11 @@
       <p class="nav__logo logo"><a href="#">Fiscaly.</a></p>
       <ul class="nav-main__list">
         <li><a href="#home" class="nav-main__link">Home</a></li>
-        <li><a href="#" class="nav-main__link">Services</a></li>
-        <li><a href="#" class="nav-main__link">About&nbsp;us</a></li>
-        <li><a href="#" class="nav-main__link">Contact&nbsp;us</a></li>
+        <li><a href="#services" class="nav-main__link">Services</a></li>
+        <!-- <li><a href="#about" class="nav-main__link">About&nbsp;us</a></li> -->
+        <li><a href="contact.html" class="nav-main__link">Contact&nbsp;us</a></li>
       </ul>
-      <p class="nav__login"><a href="#">Log&nbsp;in</a></p>
+      <p class="nav__login"><a href="https://www.fiscaly.fr/">Log&nbsp;in</a></p>
     </nav>
   </header>
   <main>
@@ -37,7 +36,7 @@
         <p>High-quality bilingual accountancy and tax services. For entrepreneurs starting or acquiring a business, and
           private individuals in France with local or international investments, we provide tailored advice to manage
           your legal obligations tax-efficiently.</p>
-        <a href="#" class="cta-button">Contact us</a>
+        <a href="contact.html" class="cta-button">Contact us</a>
       </div>
       <div class="hero-img-cont"><img src="images/hero-image.svg" alt="personnage"></div>
     </section>
@@ -45,8 +44,8 @@
       <h2>Our services.</h2>
       <div class="services">
         <div class="tabs">
-          <h3 class="active">Business Accounting & Administration</h3>
-          <h3>Personal Taxation</h3>
+          <h3 class="active" data-tab="accounting">Business Accounting & Administration</h3>
+          <h3 data-tab="taxation">Personal Taxation</h3>
         </div>
         <div class="content" data-tab="accounting">
           <p>Any for profit activity in France – regardless of the amount of revenue generated – requires a legal
@@ -107,7 +106,7 @@
     <section class="certifications">
       <h2>Our certifications.</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptate vitae voluptas expedita natus fugit.</p>
-      <img src="" alt="image de certification">
+      <!-- <img src="" alt="image de certification"> -->
     </section>
   </main>
   <footer class="section-padding-s">
@@ -126,11 +125,10 @@
         <h4 class="uppercase">Navigation</h4>
         <div class="footer-links-cont">
           <p><a href="#">Home</a></p>
-          <p><a href="#">Services</a></p>
-          <p><a href="#">About us</a></p>
-          <p><a href="#">Contact us</a></p>
-          <p><a href="#">News</a></p>
-          <p><a href="#">Log in</a></p>
+          <p><a href="#services">Services</a></p>
+          <!-- <p><a href="#about">About us</a></p> -->
+          <p><a href="contact.html">Contact us</a></p>
+          <p><a href="https://www.fiscaly.fr/">Log in</a></p>
         </div>
       </div>
       <div>
