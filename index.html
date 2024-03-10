@@ -20,13 +20,17 @@
   <header>
     <nav class="nav-main">
       <p class="nav__logo logo"><a href="#">Fiscaly.</a></p>
-      <ul class="nav-main__list">
-        <li><a href="#home" class="nav-main__link">Home</a></li>
-        <li><a href="#services" class="nav-main__link">Services</a></li>
-        <!-- <li><a href="#about" class="nav-main__link">About&nbsp;us</a></li> -->
-        <li><a href="contact.html" class="nav-main__link">Contact&nbsp;us</a></li>
-      </ul>
-      <p class="nav__login"><a href="https://www.fiscaly.fr/">Log&nbsp;in</a></p>
+      <div class="burger-cont">
+        <div class="burger--line"></div>
+      </div>
+      <div class="nav__content">
+        <ul class="nav-main__list">
+          <li><a href="#" class="nav-main__link">Home</a></li>
+          <li><a href="#services" class="nav-main__link">Services</a></li>
+          <li><a href="#contact" class="nav-main__link">Contact&nbsp;us</a></li>
+        </ul>
+        <p class="nav__login"><a href="https://www.fiscaly.fr/">Log&nbsp;in</a></p>
+      </div>
     </nav>
   </header>
   <main>
@@ -36,7 +40,7 @@
         <p>High-quality bilingual accountancy and tax services. For entrepreneurs starting or acquiring a business, and
           private individuals in France with local or international investments, we provide tailored advice to manage
           your legal obligations tax-efficiently.</p>
-        <a href="contact.html" class="cta-button">Contact us</a>
+        <a href="#contact" class="cta-button">Contact us</a>
       </div>
       <div class="hero-img-cont"><img src="images/hero-image.svg" alt="personnage"></div>
     </section>
@@ -103,10 +107,35 @@
         </div>
       </div>
     </section>
-    <section class="certifications">
+    <section class="certifications section-padding-s">
       <h2>Our certifications.</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptate vitae voluptas expedita natus fugit.</p>
       <!-- <img src="" alt="image de certification"> -->
+    </section>
+    <section class="contact section-padding-s" id="contact">
+      <h2>Contact us</h2>
+      <p class="color-accent bold">We are available from Monday to Friday between 9AM and 5PM.</p>
+      <div class="contacts-cont">
+        <div>
+          <i class='bx bxs-phone'></i>
+          <h3>Phone</h3>
+          <p>+09 81 09 00 15 (add 33 and drop the first 0 if calling from outside of France)</p>
+        </div>
+        <div>
+          <i class='bx bxs-envelope'></i>
+          <h3>Email</h3>
+          <p>Write to us at the email address:
+            <span class="underline">info@fiscaly.fr</span>
+          </p>
+        </div>
+        <div>
+          <i class='bx bxl-facebook-circle'></i>
+          <h3>Facebook</h3>
+          <p>Send us a message on Facebook
+            <a href="https://www.facebook.com/fiscaly" class="underline">https://www.facebook.com/fiscaly</a>
+          </p>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="section-padding-s">
@@ -115,10 +144,10 @@
         <p class="logo">Fiscaly.</p>
         <div>
           <h4 class="uppercase">Social Media</h4>
-          <a href="#"><i class='bx bxl-instagram'></i></a>
-          <a href="#"><i class='bx bxl-linkedin'></i></a>
-          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-          <a href="#"><i class='bx bxl-youtube'></i></a>
+          <a aria-label="instagram" href="#"><i class='bx bxl-instagram'></i></a>
+          <a aria-label="linkedin" href="#"><i class='bx bxl-linkedin'></i></a>
+          <a aria-label="facebook" href="https://www.facebook.com/fiscaly"><i class='bx bxl-facebook-circle'></i></a>
+          <a aria-label="youtube" href="#"><i class='bx bxl-youtube'></i></a>
         </div>
       </div>
       <div>
@@ -126,8 +155,7 @@
         <div class="footer-links-cont">
           <p><a href="#">Home</a></p>
           <p><a href="#services">Services</a></p>
-          <!-- <p><a href="#about">About us</a></p> -->
-          <p><a href="contact.html">Contact us</a></p>
+          <p><a href="#contact">Contact us</a></p>
           <p><a href="https://www.fiscaly.fr/">Log in</a></p>
         </div>
       </div>

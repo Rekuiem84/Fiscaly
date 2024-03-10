@@ -10,3 +10,10 @@ serviceTabs.forEach((tab, index) => {
 		console.log(index);
 	});
 });
+
+// burger menu opens on click
+const burger = document.querySelector(".burger-cont");
+
+burger.addEventListener("click", () => {
+	burger.classList.toggle("active");
+});
